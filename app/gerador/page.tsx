@@ -39,15 +39,17 @@ function GeradorContent() {
     finally { setLoading(false); }
   };
 
-  const copyToClipboard = async () => { await navigator.clipboard.writeText(result); setCopied(true); setTimeout(() => setCopied(false), 2000); };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white">
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-48 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-3xl" />
-      </div>
-      <Navbar />
+  try {
+      const response = await listingsAPI.generate(form);
+      setResult(response.listing.content);
+      if (user && response.usage) {
+        updateUser({ ...user, generationsUsed: response.usage.used });
+      }
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'Erro ao gerar anúncio');
+    } finally {
+      setLoading(false);
+    }
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="mb-8">
           <h1 className="text-3xl font-black flex items-center gap-3"><Sparkles className="w-8 h-8 text-purple-400" />Gerador de Anúncios</h1>
