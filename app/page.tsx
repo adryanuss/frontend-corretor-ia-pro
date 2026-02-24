@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Sparkles, Zap, ArrowRight, Play, CheckCircle, Star, Clock, Rocket, Camera, FileText, MessageSquare, TrendingUp, Eye, Target, ChevronDown } from 'lucide-react';
 
 export default function Home() {
@@ -38,13 +39,13 @@ export default function Home() {
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-gray-300 hover:text-white font-semibold transition-colors">Funcionalidades</a>
               <a href="#pricing" className="text-gray-300 hover:text-white font-semibold transition-colors">Preços</a>
-              <button className="group relative px-8 py-3 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-purple-600 rounded-full font-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
+              <Link href="/register" className="group relative px-8 py-3 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-purple-600 rounded-full font-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 inline-flex items-center">
                 <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-600 via-purple-600 to-fuchsia-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <span className="relative flex items-center space-x-2">
                   <span>Começar Grátis</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
-              </button>
+              </Link>
             </nav>
           </div>
         </div>
@@ -91,14 +92,14 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="group relative px-10 py-5 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-purple-600 rounded-2xl font-black text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
+                <Link href="/register" className="group relative px-10 py-5 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-purple-600 rounded-2xl font-black text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 inline-flex items-center justify-center">
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
                   <span className="relative flex items-center justify-center space-x-2">
                     <Rocket className="w-6 h-6" />
                     <span>Começar Grátis Agora</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                   </span>
-                </button>
+                </Link>
                 
                 <button className="group px-10 py-5 bg-white/5 backdrop-blur-xl rounded-2xl font-bold text-lg border border-white/10 hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2">
                   <Play className="w-6 h-6" />
@@ -180,7 +181,7 @@ export default function Home() {
       </section>
 
       {/* SEÇÃO PROBLEMAS */}
-      <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-slate-950">
+      <section id="features" className="relative py-32 px-4 sm:px-6 lg:px-8 bg-slate-950">
         <div className="container mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-black mb-4">
@@ -367,7 +368,7 @@ export default function Home() {
         </div>
       </section>
 {/* O QUE VOCÊ RECEBE */}
-      <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-slate-950">
+      <section id="pricing" className="relative py-32 px-4 sm:px-6 lg:px-8 bg-slate-950">
         <div className="container mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-black">
@@ -642,9 +643,9 @@ export default function Home() {
               <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 drop-shadow-lg">
                 Com IA, staging virtual e copy profissional
               </p>
-              <button className="px-12 py-5 bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white rounded-2xl font-black text-lg hover:scale-105 transition-all duration-300 shadow-2xl">
+              <Link href="/register" className="px-12 py-5 bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white rounded-2xl font-black text-lg hover:scale-105 transition-all duration-300 shadow-2xl inline-block">
                 Começar Agora
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -664,13 +665,13 @@ export default function Home() {
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Junte-se a mais de 2.800 corretores que já transformaram suas vendas com IA
               </p>
-              <button className="group relative px-12 py-6 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-purple-600 rounded-2xl font-black text-xl overflow-hidden transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50">
+              <Link href="/register" className="group relative px-12 py-6 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-purple-600 rounded-2xl font-black text-xl overflow-hidden transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50 inline-flex items-center justify-center">
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
                 <span className="relative flex items-center space-x-3">
                   <Rocket className="w-6 h-6" />
                   <span>Começar Grátis Agora</span>
                 </span>
-              </button>
+              </Link>
               <p className="text-sm text-gray-400">
                 ✓ 7 dias grátis • Sem cartão • Cancele quando quiser
               </p>
