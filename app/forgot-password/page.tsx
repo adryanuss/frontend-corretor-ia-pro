@@ -133,12 +133,3 @@ export default function ForgotPasswordPage() {
     </div>
   );
 }
-```
-
----
-
-## 🎯 **ONDE COLAR:**
-
-**Link direto para editar:**
-```
-https://github.com/adryanuss/frontend-corretor-ia-pro/edit/main/app/forgot-password/page.tsx
