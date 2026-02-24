@@ -17,13 +17,6 @@ export default function ForgotPasswordPage() {
 
     try {
       // TODO: Implementar endpoint de reset de senha no backend
-      // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/forgot-password`, {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ email })
-      // });
-      
-      // Simulação por enquanto
       await new Promise(resolve => setTimeout(resolve, 1500));
       setSuccess(true);
     } catch (err) {
@@ -35,14 +28,12 @@ export default function ForgotPasswordPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 flex items-center justify-center p-4 text-white">
-      {/* Background blobs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-48 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-fuchsia-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
       <div className="relative w-full max-w-md">
-        {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/login" className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white mb-6 transition-colors">
             <ArrowLeft className="w-4 h-4" />
@@ -62,7 +53,6 @@ export default function ForgotPasswordPage() {
           </div>
         </div>
 
-        {/* Card */}
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-fuchsia-600/20 rounded-3xl blur-xl" />
           <div className="relative bg-slate-900/80 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
@@ -143,3 +133,12 @@ export default function ForgotPasswordPage() {
     </div>
   );
 }
+```
+
+---
+
+## 🎯 **ONDE COLAR:**
+
+**Link direto para editar:**
+```
+https://github.com/adryanuss/frontend-corretor-ia-pro/edit/main/app/forgot-password/page.tsx
